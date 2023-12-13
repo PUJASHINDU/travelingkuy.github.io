@@ -80,13 +80,13 @@
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
             const name = document.getElementById('name').value;
-        
+            const baseUrlSurabaya = "https://be-surabaya-group-4-production.up.railway.app";
             // Tambahkan field lain sesuai kebutuhan
 
             const data = { username, password, name };
 
             // Kirim data ke server menggunakan Fetch API
-            fetch(`$/api/users`, {
+            fetch(`${baseUrlSurabaya}/api/users`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

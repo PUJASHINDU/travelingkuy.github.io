@@ -70,11 +70,8 @@
     <script>
         function kirimData() {
             const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            const baseUrlSurabaya = "https://be-surabaya-group-4-production.up.railway.app";
-            
-             // Jika login berhasil, simpan nama pengguna di session storage
-            sessionStorage.setItem('username', username);
+            const password = document.getElementById('password').value;     
+
 
             // Alihkan ke halaman index-after-login
             window.location.href = 'index-after-login.html';
@@ -84,7 +81,7 @@
             const data = { username, password};
 
             // Kirim data ke server menggunakan Fetch API
-            fetch(`${baseUrlSurabaya}/api/users/login`, {
+            fetch(`/api/users/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

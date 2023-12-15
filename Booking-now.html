@@ -100,10 +100,9 @@
     const phone = document.getElementById('phone').value;
     const id_destination = document.getElementById('id_destination').value;
 
-    const baseUrlSurabaya = "https://be-surabaya-group-4-production.up.railway.app";
     const data = { id, full_name, email, phone, id_destination };
 
-    fetch(`${baseUrlSurabaya}/api/users/booking`, {
+    fetch('https://be-surabaya-group-4-production.up.railway.app/api/users/booking', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
